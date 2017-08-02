@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var o1 = {
+            name: 'lisi',
+            age: 23
+        };
+        var o2 = {
+            name: 'wangwu',
+            sex: '男',
+            brother: {
+                name: 'wangxx'
+            }
+        };
+        function cloneObj(o2) {
+        var newObj = {};
+        for(var p in o2){
+            if(typeof o2[p] === 'object'){
+                newObj[p] = cloneObj(o2[p]);
+            }else{
+                newObj[p] = o2[p];
+            }
+        }
+        return newObj;
+        }
+        var o =cloneObj( o2);
+        console.log(o);
+    </script>
+</body>
+</html>

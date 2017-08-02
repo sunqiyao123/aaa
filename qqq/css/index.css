@@ -1,0 +1,142 @@
+.sale h2{
+    color:white;
+    /*background:black;*/
+    width:200px;
+    height:100px;
+    text-align: center;
+    line-height:100px ;
+    float:left;
+    position:absolute;
+    top:100px;
+    left:140px;
+    font-size: 30px;
+    font-weight:900;
+}
+.sale{
+    position: relative;
+}
+.bg1{
+    background: url(../img/bg1.jpg);
+    width:360px;
+    height:210px;
+    float:left;
+    margin-right: 20px;
+    margin-top: 50px;
+
+}
+.bg2{
+    background: url(../img/bg2.jpg);
+    width:360px;
+    height:210px;
+    float:left;
+    margin-right: 20px;
+
+    margin-top: 50px;
+}
+.bg3 {
+    background: url(../img/bg3.jpg);
+    width:360px;
+    height:210px;
+    float:left;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+#new-product .wrapper{
+    height:266px;
+    width:1140px;
+    margin:auto;
+    /*background:coral;*/
+
+}
+.content{
+    /*background:violet;*/
+    width:342px;
+    height:442px;
+    border:1px solid #ccc;
+    position:relative;
+    top:100px;
+    float:left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+}
+#product .wrapper{
+    /*background:red;*/
+    width:1140px;
+    height:1020px;
+    margin:auto;
+    padding-left: 23px;
+}
+.content img{
+    width:248px;
+    height:248px;
+    border:1px solid #ccc;
+    vertical-align: top;
+}
+.new{
+    color:white;
+    background:deeppink;
+    font-size:large;
+    position:relative;
+    left:57px;
+    bottom:1px;
+}
+.bottom{
+    background:#ccc;
+    width:332px;
+    height:182px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.bottom .add{
+    width:150px;
+    height:50px;
+    color:white;
+    background:orange;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border:0;
+    margin-top: 8px;
+}
+input{
+    width:154px;
+    height:34px;
+}
+.price {
+    font-size: larger;
+}
+.bottom h4{
+    font-size: larger;
+}
+#woman{
+    height: 400px;
+    width:1140px;
+    background: url(../img/banner2.jpg) no-repeat center;
+    margin-top: 40px;
+}
+#problem .wrapper{
+    height:400px;
+    width:1140px;
+    /*background:red;*/
+    margin:auto;
+}
+.ss{
+    margin-right: 40px;
+    margin-left: 70px;
+    float:left;
+    margin-top: 100px;
+
+}
+.ss li{
+    color:white;
+    list-style:disc;
+    /*background:red;*/
+}
+.ss li a{
+    color:white;
+}
+.ss li a:hover{
+    text-decoration: underline;
+}
+

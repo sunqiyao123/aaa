@@ -1,0 +1,62 @@
+li{
+    list-style:none;
+
+}
+a{
+    text-decoration: none;
+}
+*{
+    margin:0;
+    padding:0;
+}
+#nav{
+    height:84px;
+    /*background:#cccccc;  */
+    position:relative;
+}
+.wrap{
+    width:950px;
+    margin:25px auto  0;
+}
+#logo{
+    line-height: 84px;
+}
+#search-box{
+    border:1px solid #c3c3c3;
+    height:30px;
+    position:absolute;
+    left:430px;
+    top:50%;
+    margin-top:-25px;
+}
+#ipt-search{
+    width:240px;
+    height:20px;
+    font-size:13px;
+    padding:5px;
+    border:0;
+}
+#btn-search{
+    width:30px;
+    height:30px;
+    border:0;
+    background:url(../img/bn_srh_1.png) no-repeat center;
+    position:absolute;
+    left:220px;
+    top:50%;
+    margin-top:-15px;
+}
+#nav-menu{
+    position:absolute;
+    left:720px;
+    top:50%;
+    margin-top:-25px;
+
+}
+#nav-menu li{
+    float:left;
+}
+#nav-menu a{
+    background:url("../img/anony_nav_logo.png") no-repeat center center;
+}
+
