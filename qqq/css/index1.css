@@ -16,6 +16,7 @@ a{
 .wrap{
     width:950px;
     margin:25px auto  0;
+    position:relative;
 }
 #logo{
     line-height: 84px;
@@ -24,7 +25,7 @@ a{
     border:1px solid #c3c3c3;
     height:30px;
     position:absolute;
-    left:430px;
+    left:180px;
     top:50%;
     margin-top:-25px;
 }
@@ -48,7 +49,7 @@ a{
 }
 #nav-menu{
     position: absolute;
-    right:245px;
+    right:0;
     top: 50%;
     margin-top: -20px;
 }
@@ -60,7 +61,7 @@ a{
     display: block;
     width: 40px;
     height: 20px;
-    background: url("../img/anony_nav_logo.png") no-repeat center;
+    background: url("../img/anony_nav_logo.png") no-repeat;
     text-indent: -9999px;
 }
 #nav-menu .read{
