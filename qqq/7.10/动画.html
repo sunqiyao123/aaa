@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     /*  body{
+            position:relative;
+            !*position: absolute;*!
+       }*/
+        #div1{
+            width:200px;
+            height:200px;
+            background: red;
+            position: absolute;
+            left:0;
+        }
+        #line{
+            height:300px;
+            width:1px;
+            background: #000;
+            position:absolute;
+            left:300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">移动</button>
+    <div id="div1"></div>
+    <div id="line"></div>
+    <script>
+        var oBtn=document.getElementById("btn");
+        var oDiv1=document.getElementById("div1");
+
+        oBtn.onclick=function(){
+            var f=300-oDiv1.offsetLeft>0?8:-8;
+            var timer=setInterval(function () {
+                f=(300-oDiv1.offsetLeft)*0.3;
+                f=f>0?Math.ceil(f):Math.floor(f);
+                oDiv1.style.left=oDiv1.offsetLeft+f+"px";
+                if(Math.abs(300-oDiv1.offsetLeft) <=Math.abs(f)){
+                    clearInterval(timer);
+                    oDiv1.style.left="300px";
+                }
+                console.log(oDiv1.offsetLeft);
+            },100);
+        };
+    </script>
+</body>
+</html>
