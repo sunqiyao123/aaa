@@ -64,7 +64,7 @@ img{
     display: block;
     width: 40px;
     height: 20px;
-    background: url("../img/anony_nav_logo.png") no-repeat;
+    background: url("../img/anony_nav_logo.png");
     text-indent: -9999px;
 }
 #nav-menu .read{
