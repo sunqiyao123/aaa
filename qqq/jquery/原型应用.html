@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="bb">div1</div>
+    <div class="aa">div2</div>
+    <div class="aa">div3</div>
+
+    <script>
+        $(function(){
+            $("#bb").on("click",function(){
+                alert(123);
+            });
+            $(".aa").on("click",function(){
+                alert(123);
+            });
+        });
+        function addEvent(elem, type, handler){
+            if(elem.addEventListener){//能力检测
+                elem.addEventListener(type, handler);
+            }else if(elem.attachEvent){
+                elem.attachEvent("on" + type, handler);
+            }else{
+                elem["on" + type] = handler;
+            }
+        }
+        function getByClass(className, context) {
+            context = context || document;
+            if (context.getElementsByClassName) {
+                return context.getElementsByClassName(className);
+            } else {
+                var result = [];
+                var arr = context.getElementsByTagName('*');
+                for (var i = 0; i < arr.length; i++) {
+                    //arr[i].className = "aa bb"
+                    if (arr[i].className.indexOf(className) != -1) {
+                        result.push(arr[i]);
+                    }
+                }
+                return result;
+            }
+        }
+        function $(selector,context){
+            return new JQuery(selector,context);
+
+        }
+        function JQuery(selector,context){
+            if(typeof selector=="string"){
+                this.elements=[];
+                if(selector.charAt(0)=="#"){
+                    this.elements.push(document.getElementById(selector.substring(1)));
+                }
+                else if(selector.charAt(0)=="."){
+                    this.elements=getByClass(selector.substring(1),context);
+                }
+            }
+            else if(typeof selector=="function"){
+                addEvent(window,"load",selector);
+            }
+        }
+        JQuery.prototype.on = function (type, handler) {
+            for (var i = 0; i < this.elements.length; i++) {
+                addEvent(this.elements[i], type, handler);
+            }
+            return this;
+        };
+    </script>
+</body>
+</html>

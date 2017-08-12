@@ -24,7 +24,7 @@
             }
         };
         function cloneObj(obj) {
-            var newObj = {};
+            var newObj ={};
             for(var p in obj){
                 if(typeof obj[p] === 'object'){
                     newObj[p] = arguments.callee(obj[p]);//调用当前函数

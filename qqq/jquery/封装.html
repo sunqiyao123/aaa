@@ -10,10 +10,10 @@
        <div class="aa">div3</div>
     </div>
     <script>
-        $(function () {
+        /*$(function () {
               console.log($("#bb"));
               console.log($(".aa"));
-        });
+        });*/
         //绑定事件
         /**
          * 绑定事件的对象
@@ -60,6 +60,7 @@
          * @param context
          * @returns {{}}
          */
+
         function $(selector,context){
             if(typeof selector=="string"){
                 var elements={};
@@ -76,8 +77,8 @@
             }
         }
 
-        /*console.log($("#bb"));
-        console.log($(".aa"));*/
+        console.log($("#bb"));
+        console.log($(".aa"));
     </script>
 </body>
 </html>
