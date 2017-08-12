@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var obj1 = new Object();
+        obj1.name = "zhangsan";
+        obj1.age=18;
+        obj1.eat = function(){
+            alert("eating");
+        };
+        alert(obj1.name);
+        var obj2 = {
+            name : "lisi",
+            age : 20,
+            code : function(){
+                alert("coding");
+            }
+        };
+        obj2.code();
+        var obj3=new String("123");
+        alert(obj3);
+        var obj4=new Function("alert(123)");
+        obj4();
+        function People(name, age){//构造函数
+            this.name = name;
+            this.age = age;
+        }
+        People.prototype.showName = function(){
+            alert("2:" + this.name);
+        };
+
+        var p1= new People("zhangsan", 18);
+        console.log(p1.name);
+//        p1.showName();
+        var p2 = new People("lisi", 20);
+        console.log(p2.name);
+//        p2.showName();
+
+    </script>
+</body>
+</html>

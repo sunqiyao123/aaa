@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="bb">div1
+       <div class="aa">div2</div>
+       <div class="aa">div3</div>
+    </div>
+    <script>
+        $(function () {
+              console.log($("#bb"));
+              console.log($(".aa"));
+        });
+        //绑定事件
+        /**
+         * 绑定事件的对象
+         * 事件类型
+         * 事件处理函数
+         */
+            function addEvent(elem, type, handler){
+            if(elem.addEventListener){//能力检测
+                elem.addEventListener(type, handler);
+            }else if(elem.attachEvent){
+                elem.attachEvent("on" + type, handler);
+            }else{
+                elem["on" + type] = handler;
+            }
+        }
+
+        //查找标签
+        /**
+         *
+         * @param className
+         * @param context
+         * @returns {*}
+         */
+        function getByClass(className,context){
+            context=context||document;
+            if(context.getElementsByClassName){
+                return context.getElementsByClassName(className);
+            }
+            else {
+                var result = {};
+                var arr = context.getElementsByTagName("*");
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i].className.indexOf(className) != -1) {
+                        result.push(arr[i]);
+                    }
+                }
+            }
+            return result;
+        }
+        //查找标签
+        /**
+         *
+         * @param selector
+         * @param context
+         * @returns {{}}
+         */
+        function $(selector,context){
+            if(typeof selector=="string"){
+                var elements={};
+                if(selector.charAt(0)=="#"){
+                    return document.getElementById(selector.substring(1));
+                }
+                else if(selector.charAt(0)=="."){
+                    elements=getByClass(selector.substring(1),context);
+                }
+                return elements;
+            }
+            else if(typeof selector=="function"){
+                addEvent(window,"load",selector);
+            }
+        }
+
+        /*console.log($("#bb"));
+        console.log($(".aa"));*/
+    </script>
+</body>
+</html>

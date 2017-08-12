@@ -1,4 +1,4 @@
-(function(){//函数立即调用
+(function(){
     var oSmallPic = document.getElementById("small-pic");
     var aSmallImg = oSmallPic.getElementsByTagName("img");
     var oBigPic = document.getElementById("big-pic");
@@ -6,10 +6,10 @@
     var oLeft = document.getElementById("left");
     var oRight = document.getElementById("right");
     var oSingle=document.getElementById("single");
-    var aWrapper=oSingle.getElementsByClassName("wrapper")[0];//"getElementsByClassName"有兼容性问题
+    var aWrapper=oSingle.getElementsByClassName("wrapper")[0];
     var nowIndex = 0;
     for(var i=0; i<aSmallImg.length; i++){
-        aSmallImg[i].index = i;//自定义属性
+        aSmallImg[i].index = i;
         aSmallImg[i].onclick = function(){
             nowIndex = this.index;
             changeImg();

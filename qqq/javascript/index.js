@@ -1,10 +1,10 @@
 
-(function(){//函数立即调用
+(function(){
     var oProduct = document.getElementById("product");
     var aAdd = oProduct.getElementsByTagName("button");
     var aSpan = oProduct.getElementsByTagName("span");
-    var aPrice = [];//价格
-    var aNum = oProduct.getElementsByTagName("input");//数量
+    var aPrice = [];
+    var aNum = oProduct.getElementsByTagName("input");
     var oTotalPrice = document.getElementById("total-price");
     var oTotalNum = document.getElementById("total-number");
     var oClearCart = document.getElementById("clear-cart");
