@@ -1,3 +1,7 @@
+#header {
+    background: url("../img/banner.jpg") no-repeat center;
+    height:600px;
+}
 .sale h2{
     color:white;
     /*background:black;*/
@@ -77,9 +81,9 @@
     color:white;
     background:deeppink;
     font-size:large;
-    position:relative;
-    left:57px;
-    bottom:1px;
+    position: relative;
+    left:46px;
+
 }
 .bottom{
     background:#ccc;
@@ -114,12 +118,6 @@ input{
     width:1140px;
     background: url(../img/banner2.jpg) no-repeat center;
     margin-top: 40px;
-}
-#problem .wrapper{
-    height:400px;
-    width:1140px;
-    /*background:red;*/
-    margin:auto;
 }
 .ss{
     margin-right: 40px;

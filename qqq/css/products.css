@@ -12,11 +12,9 @@ img{
     border:0;
 }
 #header{
-    height:100px;
-}
-.wrapper{
-    height:100%;
-    width:1140px;
+    height:250px;
+    background: url("../img/banner.jpg") no-repeat center;
+
 }
 #product{
     width:800px;

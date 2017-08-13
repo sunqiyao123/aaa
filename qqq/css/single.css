@@ -1,5 +1,6 @@
 #header{
-    height:100px;
+    height:250px;
+    background: url("../img/banner.jpg") no-repeat center;
 }
 #main-header h1{
     position:relative;

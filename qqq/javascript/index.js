@@ -7,7 +7,7 @@
     var aNum = oProduct.getElementsByTagName("input");
     var oTotalPrice = document.getElementById("total-price");
     var oTotalNum = document.getElementById("total-number");
-    var oClearCart = document.getElementById("clear-cart");
+    var oClearCart = document.getElementById("c");
     for(var i=0; i<aSpan.length; i++){
         if(aSpan[i].className == "price"){
             aPrice.push(aSpan[i]);
@@ -29,8 +29,6 @@
         oTotalNum.innerHTML = "0";
     };
 })();
-
-
 
 
 
