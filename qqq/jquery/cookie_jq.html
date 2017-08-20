@@ -5,23 +5,15 @@
     <title>Title</title>
 </head>
 <body>
+<script src="jquery-1.12.4.js"></script>
+<script src="jquery.cookie.js"></script>
 
-<script src="js/jquery-1.11.2.js"></script>
-<script src="js/jquery.cookie.js"></script>
 <script>
     $(function(){
-        $.cookie("username", "wangwu", {expires: 30});
-        $.cookie("username", "lisi", {expires: 30});
-
-        console.log($.cookie("username"));
-
-        $.cookie("username", "", {expires: -1});
-
-        console.log($.cookie("username"));
-
-
+        $.cookie("school", "ligong", {expires: 100});
+        console.log($.cookie("school"));
+        $.cookie("school", "", {expires: -1});
     });
-
 
 </script>
 </body>

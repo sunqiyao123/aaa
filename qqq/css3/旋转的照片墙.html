@@ -7,7 +7,6 @@
         body{
             margin: 0;
             height: 100%;
-            position: relative;
         }
         img{
             margin: 0;
@@ -29,6 +28,7 @@
         #container{
             height: 100%;
             background-image: url(img/bg.jpg);
+            position: relative;
         }
         #container .img span{
             display: block;
@@ -59,16 +59,14 @@
             right: 0;
             border-radius: 8px 0 0 8px;
         }
-
     </style>
 </head>
 <body>
     <div id="container"></div>
     <div id="left"></div>
     <div id="right"></div>
-
     <script>
-        var row=4,col=6,num=row*col,THUMB_WIDTH = 125, THUMB_HEIGHT = 125,BIG_WIDTH = 750, BIG_HEIGHT = 500;
+        var row=4,col=6,num=row*col;
         var count=0;
         var oContainer=document.getElementById("container");
         for(var i=0; i<num; i++){
@@ -124,6 +122,7 @@
                 oImg[i].style.transform="rotate("+(Math.random()*40-20)+"deg)";
             }
         }
+        var THUMB_WIDTH = 125, THUMB_HEIGHT = 125,BIG_WIDTH = 750, BIG_HEIGHT = 500;
         var fBigRowGap = (oContainer.offsetHeight - BIG_HEIGHT) / 2;
         var fBigColGap = (oContainer.offsetWidth - BIG_WIDTH)/ 2;
         var flag=true;
