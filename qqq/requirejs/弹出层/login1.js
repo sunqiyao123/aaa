@@ -32,7 +32,7 @@ define(["jquery"], function($){
             width: this.defaulstSettings.width,
             height: this.defaulstSettings.height,
             marginTop : -this.defaulstSettings.height / 2,
-            marginLeft : -this.defaulstSettings.width / 2
+            marginLeft : -this.defaultSettings.width / 2
         });
         this.$item.html(this.defaulstSettings.title);
         if(this.defaulstSettings.content.indexOf(".html") != -1){
