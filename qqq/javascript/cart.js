@@ -15,7 +15,7 @@
                 oClose[i].index=i;
             }
             if(oH2!=0){
-                oH2.innerHTML++;
+                oH2.innerHTML--;
             }else{
                 oH2.innerHTML=0;
             }

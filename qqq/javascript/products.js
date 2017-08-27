@@ -21,7 +21,7 @@
                  aSub[this.index]&&animate(aSub[this.index],{
                      height:280
                  });
-                 oImg[this.index].src="../img/123.jpg";
+                 oImg[this.index].src="../img/123.png";
              }
              this.bFlag=!this.bFlag;
          },false);
