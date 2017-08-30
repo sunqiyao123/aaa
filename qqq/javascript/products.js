@@ -7,6 +7,7 @@
      var aSub=oChoose.getElementsByClassName("sub");
      var oImg=oChoose.getElementsByClassName("bottom");
      for(var i=0;i<aClassify.length;i++){
+         console.log(aClassify.length);
          aClassify[i].index=i;
          aClassify[i].bFlag=false;
          aClassify[i].addEventListener("click",function(){
