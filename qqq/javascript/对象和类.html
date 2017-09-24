@@ -13,6 +13,7 @@
             alert("eating");
         };
         alert(obj1.name);
+        alert(obj1.eat());
         var obj2 = {
             name : "lisi",
             age : 20,
@@ -35,10 +36,20 @@
 
         var p1= new People("zhangsan", 18);
         console.log(p1.name);
-//        p1.showName();
+        p1.showName();
         var p2 = new People("lisi", 20);
         console.log(p2.name);
-//        p2.showName();
+        p2.showName();
+        function A(){
+
+        }
+//        A.prototype.showName();
+//        A.prototype.showName=function () {
+//            alert("3");
+//        }
+        A.prototype=p1;
+        var p3=new A("wu");
+        p3.showName();
 
     </script>
 </body>
