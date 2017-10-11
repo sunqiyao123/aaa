@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div {
+            width: 200px;
+            border-bottom: 20px solid;
+            border-top: 20px solid;
+            border-color: black;
+            border-right: 20px solid white;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+</body>
+<script>
+    //es6:
+    //1.let 定义变量：没有变量提升，
+    // 不能重复定义，
+    // 临时失效区（暂时性死区）不能用区域外定义的变量值，
+    // 在块级作用域里有效，即{}（如for循环)
+
+//    console.log(a);var a=7;
+//    console.log(b);let b=7;
+
+//2.const:
+//    const c=10;
+//    c = 20;
+//    console.log(c);//不输出
+//
+//    const Object={a:1,b:2};
+//
+//    console.log(Object);
+//    Object.a=2;
+//
+//    console.log(Object);
+//    Object.freeze(a);
+//    console.log(Object);
+  //3.类：
+    class User{
+        constructor(n){
+            this.name=n;
+        }
+        say(){
+            console.log(this.age);
+            console.log(this.name);
+        }
+    }
+    var u=new User("xx");
+    u.say();
+    class Son extends User{
+        constructor(n,a){
+            super(n);
+            this.age=a;
+        }
+    }
+    var w=new Son("xx","12");
+    w.say();
+</script>
+</html>
