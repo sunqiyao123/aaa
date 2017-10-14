@@ -11,6 +11,7 @@
     s.add(1);
     s.add(2);
     s.add(2);
+    s.add(3);
     //s.delete(2);
     //s.clear();
     console.log(s.size);
@@ -19,7 +20,19 @@
     for(var a of key){
         console.log(a);
     }
-    //entires,values
+    var values = s.values();
+    for(var value of values){
+        console.log(value);
+    }
+    var entries = s.entries();
+    for(var e of entries) {
+        console.log(e[0], e[2]);
+    }
+    var entries2 = s.entries();
+    for(var e2 of entries2) {
+        console.log(e2[0], e2[1]);
+    }
+
 
 </script>
 </body>
