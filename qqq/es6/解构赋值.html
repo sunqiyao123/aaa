@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*let arr = [1, 2, 3];
+        let a = arr[0];
+        let b = arr[1];
+        let c = arr[2];
+        console.log(a, b, c); */
+
+      /*  let [a, b, c] = [1, 2, 3];
+        console.log(a, c, b);*/
+
+       /* let [a, b, [c, d = 0], e] = [1, 2, [3, 4], 5];
+          console.log(a, b, c, d, e);*/
+
+
+/*
+        var a = 5;
+        var b = 6;
+        a = [b, b=a][0];
+        console.log(a, b);
+        /!*var [a, b] = [b, a];*!/
+        console.log(a, b);*/
+
+
+/*
+        let [a, b, c] = 'wei';
+        console.log(a, b, c);
+
+        let foo = ([x, y, z=0]) => {
+            console.log(x, y, z);
+        };
+        foo(['a', 'b']);*/
+
+
+
+        //json
+        let json = '{"a": "Hello", "b": "World"}';
+         let [a, b, c, d, e, f, g] = json;
+         console.log(a, b, c, d, e, f, g);
+        /*let obj = JSON.parse(json);
+        let {a, b} = obj;
+        console.log(a, b);*/
+    </script>
+</body>
+</html>

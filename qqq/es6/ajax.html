@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="list"></ul>
+    <script src="jquery-1.11.2.js"></script>
+    <script>
+        //ajax:不刷新页面的请求
+        //jquery: $.get()客户端发送请求，服务端发送数据，客户端得到数据、head里，小、缓存、不安全;  $.post()body里，大、安全、客户端发送数据，服务端得到数据;
+        let $list = $('#list');
+        $.get('product-data.json', {}, function (res) {
+            let list = res.productData;
+            for (let item of list) {
+                let $li = $(`<li>${item.store}</li>`);
+                $list.append($li);
+            }
+        }, 'json');
+
+
+      /*  let p1 = new Promise((reslove, reject) => {
+            $.get('product-data.json', {}, function (res) {
+                let list = res.productData;
+                if(list.length > 0){
+                 reslove();
+                 }else{
+                 reject();
+                 }
+            }, 'json');
+         });
+         p1.then(()=>{
+            console.log('成功');
+         }).catch(()=>{
+            console.log('失败');
+         });
+*/
+
+        let p1 = new Promise((reslove, reject)=>{
+            setTimeout(()=>{
+                console.log('p1');
+                reslove();
+            }, 1000);
+        });
+        let p2 = new Promise((reslove, reject)=>{
+            setTimeout(()=>{
+                console.log('p2');
+                reslove();
+            }, 2000);
+        });
+        let p3 = new Promise((reslove, reject)=>{
+            setTimeout(()=>{
+                console.log('p3');
+                reslove();
+            }, 3000);
+        });
+
+       /* Promise.all([p1, p1, p3]).then(()=>{
+         console.log('成功');
+         }).catch(()=>{
+         console.log('失败');
+         });*/
+        Promise.race([p1, p1, p3]).then(()=>{
+            console.log('成功');
+        }).catch(()=>{
+            console.log('失败');
+        });
+
+
+
+
+    </script>
+</body>
+</html>
