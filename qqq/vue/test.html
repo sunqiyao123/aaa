@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <input type="text" @keyup.shift.enter="fn">
+    {{msg}}
+    <button @click="fn('zs',23)">click</button>
+</div>
+</body>
+<script src="vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:'#app',//作用域
+        data:{
+            msg:'aaa'
+        },
+        methods:{
+            fn:function(name,age){
+                console.log(event.target);
+                console.log(name,age);
+            }
+        }
+    });
+</script>
+</html>
