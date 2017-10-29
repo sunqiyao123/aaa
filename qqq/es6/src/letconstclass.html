@@ -17,14 +17,54 @@
 </body>
 <script>
     //es6:
-    //1.let 定义变量：没有变量提升，
+    //1.let 定义变量：没有变量提升(无undefined)，
     // 不能重复定义，
     // 临时失效区（暂时性死区）不能用区域外定义的变量值，
     // 在块级作用域里有效，即{}（如for循环)
 
-//    console.log(a);var a=7;
-//    console.log(b);let b=7;
+   /* console.log(a);//undefined
+    console.log(b);//报错*/
 
+   /*var i=0;
+   for(var i;i<3;i++){
+        console.log(i);
+    }
+    let a=0;
+    for(let a;a<3;a++){
+        console.log(a);
+    }*/
+   /* var b=10;
+    function fn(){
+        console.log(b);
+    }
+    fn();*/
+   /* var c=10;
+    function fn(){
+
+        console.log(c); var c=25;
+    }
+    fn();*///undefined
+/*    let c=10;
+    function fn(){
+
+        console.log(c); let c=25;
+    }
+    fn();*///baocuo
+   /* let c=10;
+    function fn(){
+        let c=25;
+        console.log(c);
+    }
+    fn();*/
+
+   /* for(var i=0;i<3;i++){
+        console.log(i);
+    }
+    console.log(i);
+    for(let a=0;a<3;a++){
+        console.log(a);
+    }
+    console.log(a);*/
 //2.const:
 //    const c=10;
 //    c = 20;
