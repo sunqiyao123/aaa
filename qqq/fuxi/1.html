@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #b{
+            background: forestgreen;
+         /*   overflow: scroll;*/
+         /*   overflow: auto;*/
+         /*   overflow: hidden;*/
+            overflow: inherit;/*继承父元素overflow的值*/
+        /*    overflow: visible;!*默认值*!*/
+            width: 50px;
+            height: 50px;
+         /*   border: 10px solid #000;*/
+        }
+        #a{
+            background: yellow;
+            width: 100px;
+            height: 100px;
+               overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div id="a">qqq
+        <div id="b">
+            aaaaaaaaaaaaaaaaaaaaaaaaa
+        </div>
+    </div>
+</body>
+</html>
