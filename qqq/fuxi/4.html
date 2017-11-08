@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href=”#” onmouseover="this.style.fontSize='30px'">注册</a>
+<a href=”#” onmouseover=this.style.fontSize='30px'>我</a>
+</body>
+<script>
+   var a=parseInt("011",-2);//以2为基数，范围2-36，0：以10为基数，0x／0X：以16为基数，其他：NaN
+   console.log(a);
+/*   var c=new Object();
+   c="3";
+   console.log(c.toString(2));*/
+//这种方法不可行，只是想说c一定是个对象
+   console.log(3..toString(2));
+   console.log((3).toString(2));
+   var w=function(){};
+   var w=console.log();
+   console.log(w);
+   console.log(typeof function(){});
+   var q="";
+   var q=' ';
+   console.log(q);
+   console.log(typeof(q));
+   var num = null;
+   console.log(num);
+   var x=new Object();
+   console.log(x);
+   console.log(typeof(x));
+var d="10"-1;
+   console.log(d);
+   var d="10"+1;
+console.log(d);
+   var d="a"-1;
+   console.log(d);
+   console.log(typeof(d));
+   var j=5/0;
+   console.log(typeof(j));
+   var d="a"+1;
+   console.log(d);
+var e=[];
+var e={};
+   console.log(e);
+   var p='';
+   var p=' ';
+   var p={};
+   if(p){
+       console.log("wo");
+   }
+   else{
+       console.log("ta");
+   }
+
+
+
+
+   if(typeof("101")==typeof(NaN)){
+       console.log("wo");
+   }
+   else{
+       console.log("ta");
+   }
+
+</script>
+</html>
