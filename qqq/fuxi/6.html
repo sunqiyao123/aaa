@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        .box div{
+            text-align: center;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            display: inline-block;
+            background: salmon;
+            border-radius: 100%;
+            margin:auto;
+           /* margin-right: 0;*/
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+</div><div id="qq"></div>
+</body>
+<script>
+    /**
+     * 求 10000 以内 3 和 5 的倍数和，写出JavaScript实现函数
+     * @param n
+     * @returns {number}
+     */
+    function sum(n){
+        var res=0;
+        for(var i=1; i<=n; i++){
+            if(i%3==0&&i%5==0){
+                res+=i;
+            }
+        }
+        return res;
+    }
+    var a=document.getElementById("qq");
+    a.innerHTML= sum(10000);
+</script>
+</html>
