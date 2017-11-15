@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #w{
+            background:linear-gradient(to top right,white,#000);
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
 <a href=”#” onmouseover="this.style.fontSize='30px'">注册</a>
 <a href=”#” onmouseover=this.style.fontSize='30px'>我</a>
+<div id="w"></div>
 </body>
 <script>
    var a=parseInt("011",-2);//以2为基数，范围2-36，0：以10为基数，0x／0X：以16为基数，其他：NaN
@@ -33,7 +41,7 @@
 var d="10"-1;
    console.log(d);
    var d="10"+1;
-console.log(d);
+console.log(typeof(d));
    var d="a"-1;
    console.log(d);
    console.log(typeof(d));
