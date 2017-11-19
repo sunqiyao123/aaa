@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+        var a = {
+            user:"追梦子",
+            fn:function(){
+                console.log(this.user);
+            }
+        }
+        var b = a.fn;
+        b(); //undefined
+
+
+
+        var a = {
+            user:"追梦子",
+            fn:function(){
+                console.log(this.user);
+            }
+        }
+        a.fn(); //追梦子
+
+
+
+        var a = {
+            user:"追梦子",
+            fn:function(){
+                console.log(this.user);
+            }
+        }
+        var b = a.fn;
+        b.call(a);//追梦子
+
+
+
+        var a = {
+            user:"追梦子",
+            fn:function(){
+                console.log(this.user);
+            }
+        }
+        var b = a.fn;
+        b.apply(a);//追梦子
+
+
+
+        var a = {
+            user:"追梦子",
+            fn:function(){
+                console.log(this.user);
+            }
+        }
+        var b = a.fn;
+        b.bind(a);//不打印
+
+
+
+        var a = {
+            user:"追梦子",
+            fn:function(){
+                console.log(this.user);
+            }
+        }
+        var b = a.fn;
+        var c = b.bind(a);
+        c();//追梦子
+
+
+
+        var a = {
+            user:"追梦子",
+            fn:function(e,ee,eee){
+                console.log(this.user); //追梦子
+                console.log(e+ee+eee); //6
+            }
+        }
+        var b = a.fn;
+        b.call(a,1,2,3);
+
+
+
+        var a = {
+            user:"追梦子",
+            fn:function(e,ee){
+                console.log(this.user); //追梦子
+                console.log(e+ee); //11
+            }
+        }
+        var b = a.fn;
+        b.apply(a,[10,1]);
+//或
+        var a = {
+            user:"追梦子",
+            fn:function(e,ee){
+                console.log(this.user); //追梦子
+                console.log(e+ee); //520
+            }
+        }
+        var b = a.fn;
+        var arr = [500,20];
+        b.apply(a,arr);
+
+
+
+
+
+        var a = {
+            user:"追梦子",
+            fn:function(d,f){
+                console.log(this.user); //追梦子
+                console.log(d,f); //10 1
+            }
+        }
+        var b = a.fn;
+        var c = b.bind(a,10);
+        c(1,2);
+
+</script>
+
+
+</body>
+</html>
