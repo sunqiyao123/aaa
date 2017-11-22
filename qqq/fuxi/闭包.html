@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>014</li>
+    <li>024</li>
+    <li>034</li>
+</ul>
+
+<script>
+//    var aLi = document.getElementsByTagName('li');
+//    /*
+//     for(var i=0; i<aLi.length; i++){
+//     aLi[i].index = i;
+//     aLi[i].onclick = function(){
+//     console.log(this.index);
+//     }
+//     }*/
+//    for(var i=0; i<aLi.length; i++){
+//        (function(idx){
+//
+//            aLi[i].onclick = function(){
+////                    console.log(idx);
+//                console.log(idx++);
+//            }
+//        })(i);
+//    }
+var a;
+function outer(){
+        a=0;
+//        var a=0;
+        function inner(){
+            alert(a);
+        }
+        return inner();
+}
+var fn=outer();
+
+console.log(fn);
+console.log(a);
+//(function(){})();
+//$(function(){});
+//    a=function(){
+//
+//    }
+
+</script>
+</body>
+</html>

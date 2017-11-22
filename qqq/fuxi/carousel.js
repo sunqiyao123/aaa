@@ -1,9 +1,9 @@
 requirejs.config({
     paths : {
-        require:"require.js"
+        jquery: "jquery-1.11.2"
     }
 });
-define(["require"], function($){
+define(["jquery"], function($){
     function Carousel(settings){
         this.defaultSettings = {
             selector : document.body,

@@ -1,4 +1,4 @@
-require(["jquery-1.11.2", "carousel.js"], function($, Carousel){
+requirejs(["require.js", "carousel"], function($, Carousel){
     var imgs1 = ["img/1.jpg", "img/2.jpg","img/3.jpg","img/4.jpg"];
     var setting1 = {
         selector : "#container",
