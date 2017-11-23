@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Animal(name){
+        this.name=name;
+    }
+    Animal.prototype.eat=function(){
+         console.log("haha");
+    };
+    var dog=new Animal("rrr");
+    console.log(dog.name);
+    dog.eat();
+
+
+
+
+    function Cat() {
+        Animal.call(this);
+        this.name='sss';
+    }
+    Cat.prototype=new Animal();//有constructor
+//    Cat.prototype.constructor=Cat;
+    var cat=new Cat();
+    console.log(cat.constructor);
+    cat.eat();
+    console.log(cat.name);
+</script>
+</html>
