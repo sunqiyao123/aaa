@@ -37,7 +37,7 @@ export default {
 .header h2{
   flex       : 1;
   text-align : center;
-  text-indent: -1rem;
+  text-indent: -0.9rem;
   position: relative;
   top: -3px;
 }
