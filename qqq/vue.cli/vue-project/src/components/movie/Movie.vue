@@ -15,6 +15,7 @@ import CommonHeader from "../common/CommonHeader"
 import CommonFooter from "../common/CommonFooter"
 import MovieNav from "./MovieNav"
 import MovieList from "./MovieList"
+import Axios from "axios"
 export default {
   name: 'HelloWorld',
   data () {
@@ -49,6 +50,12 @@ export default {
         }
       ]
     }
+  },
+  mounted(){
+    Axios.get(API_PROXY+"http://m.maoyan.com/movie/list.json?type=hot&limit=10&offset=0")
+      .then((res) => {
+      console.log(res);
+      });
   },
   components: {
     CommonHeader,
