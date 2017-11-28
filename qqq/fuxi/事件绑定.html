@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">click me</button>
+<script>
+    var oBtn=document.getElementById("btn");
+//    oBtn.onclick=function(){
+//        alert("1");
+//    };
+//    oBtn.onclick=function(){
+//        alert("2");
+//    };
+
+//    oBtn.attachEvent("onclick",function(){
+//        alert("1");
+//    });
+//    oBtn.attachEvent("onclick",function(){
+//        alert("2");
+//    });//ie,21
+
+//    oBtn.addEventListener("click",function(){
+//        alert("1");
+//    },false);
+//    oBtn.addEventListener("click",function(){
+//        alert("2");
+//    },false);//12
+    var fn2=function(){
+    console.log("1");
+    };
+    var fn3=function(){
+        console.log("2");
+    };
+    addEvent(oBtn, 'click', fn2);
+    addEvent(oBtn, 'click', fn3);//12
+    removeEvent(oBtn, 'click', fn2);
+//    var fn=function(){
+//        console.log("1");
+//    };
+//    oBtn.addEventListener('click', fn, false);
+//
+//    oBtn.removeEventListener('click', fn, false);
+//
+//    /*oBtn.attachEvent('onclick', fn);
+//
+//     oBtn.detachEvent('onclick', fn);*/
+
+    function addEvent(elem, type, handler) {
+        if(elem.addEventListener){//能力检测, 标准浏览器
+            elem.addEventListener(type, handler, false);
+        }else if(elem.attachEvent){//ie
+            elem[type+handler] = function () {
+                handler.call(elem);
+            };
+            elem.attachEvent('on' + type, elem[type+handler]);
+        }
+    }
+
+    function removeEvent(elem, type, handler) {
+        if(elem.removeEventListener){
+            elem.removeEventListener(type, handler, false);
+        }else if(elem.detachEvent){
+            elem.detachEvent('on'+type, elem[type+handler]);
+        }
+    }
+
+
+</script>
+</body>
+</html>
