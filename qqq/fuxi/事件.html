@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: #ff0000;
+            margin: 0 auto;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: black;
+            position: relative;
+            top: 10000px;
+            left: 50px;
+        }
+        #div3{
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+            position: relative;
+            top: 10000px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="ipt" value="abc">
+<input type="text" id="ipt1" value="abc">
+<div id="div1"></div>
+<div id="div2"></div>
+<div id="div3"></div>
+<div id="div4"><a href="http://w3cschool.cc/">Go to W3Cschool.cc</a></div>
+<div id="div5">qqq</div>
+<!--<input id="ipt2" onselect="aa()">-->
+<input id="ipt2">
+<script>
+     var oIpt = document.getElementById('ipt');
+     oIpt.onchange = function (e) {
+         e = e || window.event;
+         console.log(1111);
+         console.log(e.type);
+     };
+
+
+     var oIpt1 = document.getElementById('ipt1');
+     oIpt1.onchange = function () {
+         oIpt1.value=oIpt1.value.toUpperCase();
+     };
+
+
+
+     var oDiv1=document.getElementById("div1");
+     oDiv1.onclick=function (e) {
+         e = e || window.event;
+         console.log(e.offsetX + ", " + e.offsetY);
+         console.log(e.screenX + ", " + e.screenY);//包括滚动条
+         console.log(e.layerX + ", " + e.layerY);//不包括滚动条,如果出现滚动条=offset；如果没出现滚动条=client
+         console.log(e.clientX + ", " + e.clientY);//不包括滚动条
+     };
+
+
+
+     var oDiv2=document.getElementById("div2");
+     oDiv2.onclick=function (e) {
+         e = e || window.event;
+         console.log(e.offsetX + ", " + e.offsetY);
+         console.log(e.screenX + ", " + e.screenY);//包括滚动条
+         console.log(e.layerX + ", " + e.layerY);//不包括滚动条,如果出现滚动条=offset；如果没出现滚动条=client
+         console.log(e.clientX + ", " + e.clientY);//不包括滚动条
+     };
+
+
+     document.getElementById("div3").oncontextmenu = function (e) {//右键点击
+         console.log('haha');
+     };
+
+
+     var oDiv4=document.getElementById("div4");
+     oDiv4.onclick=function (e) {
+         e = e || window.event;
+         e.preventDefault();//阻止a
+//         e.returnValue = false;//ie
+     };
+
+
+     var oDiv5=document.getElementById("div5");
+     oDiv5.ondblclick=function () {
+         console.log("1");
+     };
+
+
+//     function aa() {
+//         alert(1234);
+//     }
+     var oIpt2 = document.getElementById('ipt2');
+     oIpt2.onselect=function() {
+        alert("123");
+    }
+</script>
+</body>
+</html>
