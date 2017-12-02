@@ -1,9 +1,9 @@
 requirejs.config({
     paths : {
-        require:"require.js"
+        jquery: "jquery-1.11.2"
     }
 });
-define(["require"], function($){
+define(["jquery"], function($){
     function Carousel(settings){
         this.defaultSettings = {
             selector : document.body,
@@ -25,14 +25,11 @@ define(["require"], function($){
         this.$container.append(this.$imgs).append(this.$nav).append(this.$arrows);
         this.$arrows.append(this.$left).append(this.$right);
         for(var i=0; i<this.defaultSettings.imgArr.length; i++){
-            this.$imgs.append("<img src="+ this.defaultSettings.imgArr[i] +">");
+            this.$imgs.append("<img src='"+ this.defaultSettings.imgArr[i] +"'>");
             this.$nav.append("<li>"+ (i + 1) +"</li>");
         }
         $("img", this.$imgs).eq(0).addClass("selected");
         $("li", this.$nav).eq(0).addClass("selected");
-
-
-
         if(this.defaultSettings.buttonStyle == "circle"){
             $("li", this.$nav).css({
                 borderRadius: "50%"
@@ -40,10 +37,10 @@ define(["require"], function($){
         }
         this.$left.addClass(this.defaultSettings.arrowsPos);
         this.$right.addClass(this.defaultSettings.arrowsPos);
+
+
         $(this.defaultSettings.selector).append(this.$container);
-
-
-
+        //事件
         $("li", this.$nav).on("mouseover", function(e){
             this.nowIndex = $(e.target).index();//e.target => li
             changeImg.call(this);
@@ -64,8 +61,6 @@ define(["require"], function($){
             changeImg.call(this);
         }.bind(this));
 
-
-
         this.$container.hover(function(){
             clearInterval(this.timer);
         }.bind(this), function(){
@@ -80,8 +75,7 @@ define(["require"], function($){
             }.bind(this), this.defaultSettings.speed);
         }
 
-
-
+        //私有方法
         function changeImg(){
             $("li", this.$nav).eq(this.nowIndex).addClass("selected").siblings().removeClass("selected");
             $("img", this.$imgs).eq(this.nowIndex).addClass("selected").siblings().removeClass("selected");

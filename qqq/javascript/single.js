@@ -62,14 +62,14 @@
         e = e || window.event;
         var left = e.pageX - aWrapper.offsetLeft - oDrag.offsetWidth / 2;
         var top = e.pageY - oSingle.offsetTop - oDrag.offsetHeight / 2;
-        if (top < 0){
-            top = 0;
+        if (top < 11){
+            top = 11;
         }
-        if (left < 0){
-            left = 0;
+        if (left < 6){
+            left = 6;
         }
-        var maxX =oBigPic .offsetWidth - oDrag.offsetWidth;
-        var maxY =oBigPic .offsetHeight - oDrag.offsetHeight;
+        var maxX =oBigPic .offsetWidth  - oDrag.offsetWidth-8;
+        var maxY =oBigPic .offsetHeight  - oDrag.offsetHeight-7;
         if (left > maxX){
             left = maxX;
         }
